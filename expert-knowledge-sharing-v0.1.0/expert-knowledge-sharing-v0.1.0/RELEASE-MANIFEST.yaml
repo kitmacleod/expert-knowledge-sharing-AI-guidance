@@ -1,0 +1,37 @@
+project: expert-knowledge-sharing
+version: 0.1.0
+status: experimental
+release_date: 2026-11-08
+
+runtime:
+  microsoft_365_copilot:
+    authoritative_instructions: adapters/microsoft-365-copilot/RUNTIME-INSTRUCTIONS.md
+    supported_deployments:
+      - notebook_workspace
+      - agent_builder
+    recommended_deployment: agent_builder
+    requires_other_runtime_files: false
+
+configuration:
+  - adapters/microsoft-365-copilot/AGENT-CONFIGURATION.md
+  - adapters/microsoft-365-copilot/CONVERSATION-STARTERS.md
+
+supporting_specification:
+  - specification/DESIGN-PRINCIPLES.md
+  - specification/SAFEGUARDS.md
+  - specification/KNOWLEDGE-NOTE-TEMPLATE.md
+
+validation:
+  - evaluation/ACCEPTANCE-TESTS.md
+
+examples:
+  - examples/EXAMPLE-SESSION.md
+
+release_checks:
+  runtime_instructions_self_contained: true
+  runtime_does_not_require_folder_traversal: true
+  contains_participant_review_step: true
+  contains_safety_requirements: true
+  contains_output_format: true
+  prevents_expert_impersonation: true
+  one_topic_default: true

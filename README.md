@@ -139,6 +139,4 @@ The recipient's next question is a valuable candidate for another session.
 
 v0.1.0 closes the first design iteration. The priority now is evidence from real trials rather than adding prompt complexity.
 
-## Licensing
 
-No licence decision has been imposed in v0.1. The `LICENSE` file explains the decision still required before public reuse.
